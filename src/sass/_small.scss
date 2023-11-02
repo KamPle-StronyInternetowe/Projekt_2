@@ -1,0 +1,209 @@
+@media (min-width: 280px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  nav {
+    .brand-logo {
+      margin-left: 0;
+      font-size: 4.5rem;
+    }
+    .skew-block {
+      width: 240px;
+    }
+    .nav-items {
+      position: fixed;
+      flex-direction: column;
+      margin-right: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(40, 40, 40, 0.7);
+      backdrop-filter: blur(4px);
+      transform: translateX(100%);
+      transition: all 0.5s;
+
+      .nav-item {
+        width: 510px;
+        top: 20%;
+        left: 40%;
+        padding: 1em 3em;
+        margin-bottom: 1.5em;
+        transition: left 0.5s;
+      }
+
+      .nav-item:hover {
+        left: 50%;
+      }
+
+      .nav-item::before {
+        height: 100%;
+        background-color: $green-color;
+        transform: skewX(-45deg);
+      }
+    }
+    .nav-items.mobile-menu {
+      transform: translateX(0%);
+    }
+    .burger-icon {
+      position: absolute;
+      display: flex;
+      z-index: 10;
+    }
+    .burger-icon span {
+      transition: all 0.5s;
+    }
+  }
+  .home-section {
+    .hero-img {
+      position: absolute;
+      background-image: url("../../dist/img/bridge-2767545_1280_small2.jpg");
+      background-position: -200px 0;
+
+      .hero-text {
+        font-size: 3.5rem;
+      }
+
+      .cta-button {
+        bottom: 100px;
+        width: 190px;
+      }
+
+      @keyframes cta-animation {
+        0% {
+          bottom: 100px;
+          transform: translateX(-50%) scale(0.9);
+        }
+        100% {
+          bottom: 110px;
+          transform: translateX(-50%) scale(1);
+        }
+      }
+    }
+  }
+  .section-title {
+    .title-block {
+      left: -75px;
+      width: 270px;
+    }
+  }
+  .oferts-section {
+    .oferts-cards {
+      .ofert-card {
+        width: 300px;
+        height: 500px;
+        margin: 4em 1em;
+
+        .ofert-img {
+          width: 100%;
+          height: 100%;
+
+          .ofert-text {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 5rem;
+            font-size: 3.5rem;
+          }
+        }
+      }
+      .ofert-card:nth-child(2) {
+        transform: translateX(100px);
+      }
+      .ofert-card:nth-child(3) {
+        transform: translateX(-100px);
+      }
+      .ofert-card.show {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  .aboutus-section {
+    .aboutus-box {
+      padding: 1em;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .aboutus-text {
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+      }
+      .aboutus-text:nth-child(2) {
+        transform: translateX(-100px);
+      }
+      .aboutus-text.show {
+        transform: translateX(0);
+      }
+      .aboutus-img {
+        margin: 1em;
+        width: 100%;
+        max-width: 460px;
+        transform: translateX(100px);
+      }
+    }
+    .mobile-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+  .realisation-section {
+    .realisation-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0;
+
+      .realisation-img {
+        margin: 2em 1em;
+        width: 100%;
+        max-width: 460px;
+      }
+      .realisation-img:nth-child(2) {
+        position: relative;
+        top: 0px;
+      }
+    }
+    .realisation-box.second {
+      margin-top: 0;
+      padding-bottom: 2em;
+    }
+  }
+  .contact-section {
+    .hero-img {
+      background-image: url("../../dist/img/grass-275986_640-small.jpg");
+    }
+    .hero-text {
+      width: 100%;
+      max-width: 350px;
+      line-height: 3.75rem;
+      font-size: 2.25rem;
+
+      span {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  footer {
+    background-color: $green-color;
+    padding-top: 2.5em;
+
+    .links-container {
+      padding: 2em 1em 1em 1em;
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+          margin: 0.25em 0.5em;
+          font-size: 1.75rem;
+        }
+      }
+    }
+    .footer-line {
+      margin: 1em 0;
+    }
+  }
+}
